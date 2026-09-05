@@ -1,27 +1,26 @@
-def even_or_odd(num):
-    if num % 2 == 0:
-        return "even"
+def sign(num):
+    if num >= 1:
+        return 1
+    elif num <= -1:
+        return -1
     else:
-        return "odd"
+        return 0
 
-def test_even_or_odd_even_number():
-    assert even_or_odd(6) == "even"
+def test_sign_positive_number():
+    assert sign(12) == 1 
 
-test_even_or_odd_even_number()
+test_sign_positive_number()
 
-def test_even_or_odd_odd_number():
-    assert even_or_odd(3) == "odd"
+def test_sign_negative_number():
+    assert sign(-10) == -1
 
-test_even_or_odd_odd_number()
+test_sign_negative_number()
 
-def test_even_or_odd_negative_even_number():
-    assert even_or_odd(-4) == "even"
+def test_sign_zero():
+    assert sign(0) == 0
 
-test_even_or_odd_negative_even_number()
+test_sign_zero()
 
-def test_even_or_odd_negative_odd_number():
-    assert even_or_odd(-7) == "odd"
-
-test_even_or_odd_negative_odd_number()
-
-print(even_or_odd(0))
+print(sign(-8))
+print(sign(6))
+print(sign(0))
